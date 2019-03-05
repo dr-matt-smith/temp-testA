@@ -4,8 +4,28 @@
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
+        <style>
+            body{
+                background-color: lightgrey;
+                color: blue;
+            }
+
+            a {
+                color: black;
+            }
+
+        </style>
     </head>
     <body>
+    <ul>
+        <li>
+            <a href="{{ url('default_index') }}">home</a>
+        </li>
+        <li>
+            <a href="{{ url('default_contact') }}">contact</a>
+        </li>
+    </ul>
+
         {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}
     </body>
